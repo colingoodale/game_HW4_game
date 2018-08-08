@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" text="style/css" href="./css/style.css">
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
+        crossorigin='anonymous'></script>
+</head>
+
+<body>
+    <button id="start">Start</button>
+    <button id="diamond">Diamond</button>
+    <button id="ruby">Ruby</button>
+    <button id="saphire">Saphire</button>
+    <button id="emerald">Emerald</button>
+    <div id="currentScore"></div>
+
+    <script>
+        var diamondScore = 5;
+        var rubyScore = 10;
+        var saphireScore = 15;
+        var emeraldScore = 20;
+        var currentPlayerScore = 0;
+        //reset to start game
+        $("#diamond").on("click", function () {
+            currentPlayerScore = currentPlayerScore + diamondScore;
+            console.log(currentPlayerScore)
+        })
+        $("#ruby").on("click", function () {
+            currentPlayerScore = currentPlayerScore + rubyScore;
+            console.log(currentPlayerScore)
+        })
+        $("#saphire").on("click", function () {
+            currentPlayerScore = currentPlayerScore + saphireScore;
+            console.log(currentPlayerScore)
+        })
+        $("#emerald").on("click", function () {
+            currentPlayerScore = currentPlayerScore + emeraldScore;
+            console.log(currentPlayerScore)
+        })
+        //displrandom number to player to start game
+        //provide answer accumulation at 0  
+        //assign random value values to buttons - hidden
+        //onclick add hidden value to answer accumulation
+        //if answer accumulation
+        var randomNumber = 0;
+        var randomNumberChosen = false;
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
