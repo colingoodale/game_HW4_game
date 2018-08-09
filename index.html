@@ -27,20 +27,23 @@
         var saphireScore = 12;
         var emeraldScore = 6;
         var currentPlayerScore = 0;
-        var chosenNumber = false;
         //startGame();    
         //reset to start game
         //pick random number from numberArray
+
+
+
         $('#start').on("click", function () {
             if (currentPlayerScore = 0) {
-                var currentNumber = numberArray[Math.floor(Math.random() * numberArray.length)];
+                currentNumber = numberArray[Math.floor(Math.random() * numberArray.length)];
                 document.getElementById("neededScore").innerHTML = currentNumber;
             } else {
                 currentPlayerScore = 0;
                 document.getElementById("currentScore").innerHTML = currentPlayerScore;
-                var currentNumber = numberArray[Math.floor(Math.random() * numberArray.length)];
+                currentNumber = numberArray[Math.floor(Math.random() * numberArray.length)];
                 document.getElementById("neededScore").innerHTML = currentNumber;
             }
+
         })
 
 
@@ -62,7 +65,7 @@
         })
 
 
-
+        //create win condition. Scope issues.
 
 
 
