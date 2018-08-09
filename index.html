@@ -18,14 +18,32 @@
     <button id="saphire">Saphire</button>
     <button id="emerald">Emerald</button>
     <div id="currentScore"></div>
+    <div id="neededScore"></div>
 
     <script>
-        var diamondScore = 5;
-        var rubyScore = 10;
-        var saphireScore = 15;
-        var emeraldScore = 20;
+        var numberArray = [36, 24, 32, 64, 45, 22, 18, 21, 13, 15, 18, 23, 51, 72, 64, 85, 42, 52, 84, 78, 96, 66, 36, 28, 47, 46]
+        var diamondScore = 3;
+        var rubyScore = 4;
+        var saphireScore = 12;
+        var emeraldScore = 6;
         var currentPlayerScore = 0;
+        var chosenNumber = false;
         //reset to start game
+        function chooseNumber() {
+            var currentNumber = numberArray[Math.floor(Math.random() * numberArray.length)];
+            console.log(currentNumber);
+        }
+
+
+
+        //pick random number from numberArray
+        // if (chosenNumber = false) {
+        //     startGame();
+        //     $("#needeScore").append();
+        //     chosenNumber = true;
+        // }
+
+
         $("#diamond").on("click", function () {
             currentPlayerScore = currentPlayerScore + diamondScore;
             console.log(currentPlayerScore)
@@ -42,13 +60,13 @@
             currentPlayerScore = currentPlayerScore + emeraldScore;
             console.log(currentPlayerScore)
         })
+
         //displrandom number to player to start game
+
         //provide answer accumulation at 0  
         //assign random value values to buttons - hidden
         //onclick add hidden value to answer accumulation
         //if answer accumulation
-        var randomNumber = 0;
-        var randomNumberChosen = false;
 
 
 
