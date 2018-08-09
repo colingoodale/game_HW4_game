@@ -17,8 +17,8 @@
     <button id="ruby">Ruby</button>
     <button id="saphire">Saphire</button>
     <button id="emerald">Emerald</button>
-    <div id="currentScore"></div>
-    <div id="neededScore"></div>
+    <h1 id="currentScore">Your Points!</h1>
+    <h1 id="neededScore">Hit This Score!!</h1>
 
     <script>
         var numberArray = [36, 24, 32, 64, 45, 22, 18, 21, 13, 15, 18, 23, 51, 72, 64, 85, 42, 52, 84, 78, 96, 66, 36, 28, 47, 46]
@@ -28,45 +28,40 @@
         var emeraldScore = 6;
         var currentPlayerScore = 0;
         var chosenNumber = false;
+        //startGame();    
         //reset to start game
-        function chooseNumber() {
-            var currentNumber = numberArray[Math.floor(Math.random() * numberArray.length)];
-            console.log(currentNumber);
-        }
-
-
-
         //pick random number from numberArray
-        // if (chosenNumber = false) {
-        //     startGame();
-        //     $("#needeScore").append();
-        //     chosenNumber = true;
-        // }
+        $('#start').on("click", function () {
+            if (currentPlayerScore = 0) {
+                var currentNumber = numberArray[Math.floor(Math.random() * numberArray.length)];
+                document.getElementById("neededScore").innerHTML = currentNumber;
+            } else {
+                currentPlayerScore = 0;
+                document.getElementById("currentScore").innerHTML = currentPlayerScore;
+                var currentNumber = numberArray[Math.floor(Math.random() * numberArray.length)];
+                document.getElementById("neededScore").innerHTML = currentNumber;
+            }
+        })
 
 
         $("#diamond").on("click", function () {
             currentPlayerScore = currentPlayerScore + diamondScore;
-            console.log(currentPlayerScore)
+            document.getElementById("currentScore").innerHTML = currentPlayerScore;
         })
         $("#ruby").on("click", function () {
             currentPlayerScore = currentPlayerScore + rubyScore;
-            console.log(currentPlayerScore)
+            document.getElementById("currentScore").innerHTML = currentPlayerScore;
         })
         $("#saphire").on("click", function () {
             currentPlayerScore = currentPlayerScore + saphireScore;
-            console.log(currentPlayerScore)
+            document.getElementById("currentScore").innerHTML = currentPlayerScore;
         })
         $("#emerald").on("click", function () {
             currentPlayerScore = currentPlayerScore + emeraldScore;
-            console.log(currentPlayerScore)
+            document.getElementById("currentScore").innerHTML = currentPlayerScore;
         })
 
-        //displrandom number to player to start game
 
-        //provide answer accumulation at 0  
-        //assign random value values to buttons - hidden
-        //onclick add hidden value to answer accumulation
-        //if answer accumulation
 
 
 
